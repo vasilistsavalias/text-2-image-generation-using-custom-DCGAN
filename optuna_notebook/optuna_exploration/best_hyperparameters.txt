@@ -1,0 +1,12 @@
+Best trial: 2
+Value: 0.5964004736357984
+Params:
+    lr: 0.0005055065159992203
+    beta1: 0.478727416468715
+    batch_size: 8
+    gradient_accumulation_steps: 1
+    lr_scheduler_patience: 11
+    lr_scheduler_factor: 0.43201065111155756
+    fm_loss_weight: 1.0236052161208398
+    use_ttur: False
+    optimizer: AdamW

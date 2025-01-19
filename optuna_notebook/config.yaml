@@ -1,0 +1,60 @@
+checkpointing:
+  save_dir: checkpoints
+  save_frequency: 5
+dataset:
+  captions_file: annotations/captions_train2017.json
+  image_dir: train2017
+  max_caption_length: 52
+  name: coco2017
+  root_dir: /kaggle/input/coco-2017-dataset/coco2017
+  vocab_threshold: 5
+evaluation:
+  fid_feature_layer: 2048
+  metrics:
+  - fid
+  - is
+logging:
+  experiment_name: text-to-image-synthesis
+  image_frequency: 500
+  log_dir: logs
+  log_frequency: 100
+model:
+  clip_model_name: ViT-B/32
+  embedding_dim: 512
+  hidden_size: 256
+  image_size: 224
+  name: Custom-DCGAN
+  noise_dim: 100
+  num_layers: 1
+  word_embedding_dim: 512
+training:
+  batch_size: 8
+  beta1: 0.592738363457288
+  beta2: 0.999
+  d_lr: 1.7345334146963785e-05
+  disc_loss_weight: 0.5
+  fid_interval: 1
+  fm_loss_weight: 0.6236673541580303
+  folds_cv: 5
+  g_lr: 5.786459169534207e-06
+  gamma: 0.5
+  gen_loss_weight: 1.0
+  gradient_accumulation_steps: 4
+  lambda_fm: 0.6236673541580303
+  lambda_gp: 10
+  log_interval: 100
+  lr: 1.7345334146963785e-05
+  lr_scheduler_factor: 0.8763379686926153
+  lr_scheduler_patience: 5
+  n_critic: 5
+  num_epochs: 4
+  num_samples_fid: 1000
+  num_workers: 4
+  overfitting_epochs: 30
+  patience: 5
+  save_interval: 1
+  step_size: 10
+  subset_size: 0.1
+  trials: 6
+  use_ttur: true
+  weight_decay: 0.0001
